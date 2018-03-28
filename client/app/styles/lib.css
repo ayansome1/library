@@ -14491,6 +14491,16 @@ text-white {
 
 
 /* Style the links inside the navigation bar */
+.topnav .title {
+    float: left;
+    display: block;
+    color: #6379f6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
 .topnav a {
     float: right;
     display: block;
@@ -14508,6 +14518,10 @@ text-white {
 
 .topnav a.active {
     border-bottom: 3px solid #6379f6;
+}
+
+.cornflower {
+  color: #6379f6
 }
 
 
