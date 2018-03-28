@@ -14490,5 +14490,28 @@ text-white {
 
 
 
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    display: block;
+    color: #6379f6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 3px solid transparent;
+}
+
+.topnav a:hover {
+    border-bottom: 3px solid #6379f6;
+}
+
+.topnav a.active {
+    border-bottom: 3px solid #6379f6;
+}
+
+
+
+
 
 

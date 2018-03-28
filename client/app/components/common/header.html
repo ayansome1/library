@@ -1,4 +1,6 @@
 <ul class="nav navbar-nav navbar-right padding-10">
-    <a ng-click="gotoBooksPage()">Books</a>
-    <a ng-click="gotoAuthorsPage()">Authors</a>
+    <div class="topnav">
+        <a ng-click="gotoAuthorsPage()" ng-class="{active : $root.tab =='authors'}">Authors</a>
+        <a ng-click="gotoBooksPage()" ng-class="{active : $root.tab =='books'}">Books</a>
+    </div>
 </ul>
