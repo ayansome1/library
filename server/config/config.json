@@ -1,0 +1,13 @@
+{
+	"sqlconn": {
+		"host": "127.0.0.1",
+		"user": "root",
+		"password": "root",
+		"database": "lib"
+	},
+	"lib": {
+		"port": 9085,
+		"corsorigin": "http://localhost"
+	},
+	"accessToken" : "lib123!"
+}
