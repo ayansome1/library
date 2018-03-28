@@ -5,7 +5,7 @@ angular.module('libApp')
 
 .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/books');
 
 	$stateProvider
 		.state('app', {
@@ -13,9 +13,14 @@ angular.module('libApp')
 			templateUrl: 'components/common/layout.html'
 		})
 		
-		.state('app.home', {
-			url: '/',
-			templateUrl: 'components/home/home.html',
+		.state('app.books', {
+			url: '/books',
+			templateUrl: 'components/books/books.html',
+		})
+
+		.state('app.authors', {
+			url: '/authors',
+			templateUrl: 'components/authors/authors.html',
 		});
 
 }])
