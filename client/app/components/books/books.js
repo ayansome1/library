@@ -19,9 +19,9 @@ angular.module('libApp')
 
 		// getAllBooks();
 		// $scope.abc = "1234243252";
-		$scope.books = "books123";
-			$rootScope.tab = 'books';
-		
+		$scope.books = "12";
+		$rootScope.tab = 'books';
+
 
 		
 

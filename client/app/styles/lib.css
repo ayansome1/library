@@ -14524,6 +14524,15 @@ text-white {
   color: #6379f6
 }
 
+.float-left {
+  float: left
+}
+
+.float-right {
+  float: right
+}
+
+
 
 
 
