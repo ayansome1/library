@@ -14574,6 +14574,10 @@ text-white {
     cursor: pointer;
 }
 
+md-dialog{
+  min-width: 50%
+}
+
 
 
 

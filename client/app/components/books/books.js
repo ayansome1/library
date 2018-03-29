@@ -33,7 +33,7 @@ angular.module('libApp').controller('booksController', [
 				parent: angular.element(document.body),
 				targetEvent: ev,
 				clickOutsideToClose: true,
-				fullscreen: false, // Only for -xs, -sm breakpoints.
+				fullscreen: true, // Only for -xs, -sm breakpoints.
 			});
 			/*.then(
 					function(answer) {
