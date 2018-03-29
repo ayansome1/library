@@ -126,7 +126,7 @@ body {
   line-height: 1.53846154;
   direction: ltr;
   -webkit-font-smoothing: antialiased;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Roboto", sans-serif, sans-serif;
+  font-family: "reg";
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 body.stop-scrolling {
@@ -13911,6 +13911,9 @@ fieldset[disabled] .btn-float.active {
     padding-right: 20px;
 }
 
+.padding-right-50 {
+    padding-right: 50px;
+}
 .padding-top-30 {
     padding-top: 30px;
 }
@@ -14505,26 +14508,30 @@ text-white {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 20px;
+    font-family: "project-title-font"
 }
 
 .topnav a {
+    font-family: "med";
     float: right;
     display: block;
-    color: #8300FF;
+    color: #9395a0;
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px 30px 8px;
     text-decoration: none;
     font-size: 14px;
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 .topnav a:hover {
-    border-bottom: 3px solid #8300FF;
+  color: #8300FF;
+  border-bottom: 2px solid #8300FF;
 }
 
 .topnav a.active {
-    border-bottom: 3px solid #8300FF;
+  color: #8300FF;
+  border-bottom: 2px solid #8300FF;
 }
 
 .cornflower {
@@ -14538,6 +14545,8 @@ text-white {
 .float-right {
   float: right
 }
+
+
 
 .book-container {
     padding: 20px;  
@@ -14559,7 +14568,9 @@ text-white {
     margin-left: 50px
 }
 .book-title {
-    font-weight: bold;
+    /*font-weight: bold;*/
+  font-family: "med";
+
     font-size: 15px;
     color: #47494f;
 }
@@ -14570,7 +14581,9 @@ text-white {
 .book-author {
   color: #47494f;
   font-size: 13px;
-  font-weight: bold;
+  /*font-weight: bold;*/
+  font-family: "med";
+
 }
 .book-isbn {
   float: right,
@@ -14591,7 +14604,9 @@ text-white {
 .book-header {
   color: #777982;
   font-size: 12px;
-  font-weight: bold;
+  /*font-weight: bold;*/
+  font-family: "med";
+
 }
 
 .book-count {

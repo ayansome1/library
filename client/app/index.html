@@ -5,21 +5,32 @@
     <title>Library app</title>
     <!-- <link rel="icon" type="image/png" href="files/favicon.png"> -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-    
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css"> -->
     <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css">
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
     <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="styles/lib.css">
+    <style type="text/css">
+    @font-face {
+        font-family: "med";
+        src: url("fonts/Roboto-Medium.ttf");
+    }
 
+    @font-face {
+        font-family: "reg";
+        src: url("fonts/Roboto-Regular.ttf");
+    }
+    @font-face {
+        font-family: "project-title-font";
+        src: url("fonts/Montserrat-Bold.ttf");
+    }
+    
+    </style>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script> -->
-
-
 </head>
 
 <body data-ng-controller="libCtrl" data-ng-app="libApp">
-    
     <div>
         <div data-ui-view></div>
     </div>
@@ -29,34 +40,26 @@
     <script src="../bower_components/noty/js/noty/packaged/jquery.noty.packaged.js"></script>
     <script src="../bower_components/lodash/dist/lodash.min.js"></script>
     <!-- <script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script> -->
-    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> 
-        <script src="../bower_components/angular-aria/angular-aria.js"></script>
-
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
     <script src="../bower_components/angular-animate/angular-animate.js"></script>
     <script src="../bower_components/angular-messages/angular-messages.js"></script>
     <script src="../bower_components/angular-material/angular-material.js"></script>
     <script src="../bower_components/angular-touch/angular-touch.js"></script>
     <script src="../bower_components/moment/moment.js"></script>
     <script src="../bower_components/angular-moment/angular-moment.min.js"></script>
-
-
     <script src="scripts/noty-defaults.js"></script>
     <script src="app.js"></script>
     <!-- <script src="services/auth.js"></script> -->
     <!-- <script src="factory/local-storage.js"></script> -->
-    
     <!-- <script src="services/session.js"></script> -->
     <script src="config.router.js"></script>
-    
     <script src="app.main.js"></script>
     <!-- <script src="services/api-interceptor.js"></script> -->
     <!-- <script src="directives/common.js"></script> -->
     <!-- <script src="config.router.js"></script> -->
     <script src="components/books/books.js"></script>
-
     <script src="components/authors/authors.js"></script>
-
 </body>
 
 </html>
-
