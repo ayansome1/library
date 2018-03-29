@@ -14501,7 +14501,7 @@ text-white {
 .topnav .title {
     float: left;
     display: block;
-    color: #6379f6;
+    color: #8300FF;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -14511,7 +14511,7 @@ text-white {
 .topnav a {
     float: right;
     display: block;
-    color: #6379f6;
+    color: #8300FF;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -14520,11 +14520,11 @@ text-white {
 }
 
 .topnav a:hover {
-    border-bottom: 3px solid #6379f6;
+    border-bottom: 3px solid #8300FF;
 }
 
 .topnav a.active {
-    border-bottom: 3px solid #6379f6;
+    border-bottom: 3px solid #8300FF;
 }
 
 .cornflower {
@@ -14613,7 +14613,7 @@ text-white {
 .lib-button {
 /*    width: 210px;
     height: 40px;*/
-    background-color: #6379f6;
+    background-color: #8300FF;
     border: none;
     color: white;
     padding: 5px 50px;
@@ -14653,7 +14653,7 @@ md-dialog{
 
 .more-info {
   cursor: pointer;
-  color: #6379f6;
+  color: #8300FF;
   font-weight: 12px;
 }
 
