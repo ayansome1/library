@@ -1,4 +1,8 @@
 <div class="padding-30">
+    <div>
+        <span class="font-bold">ADD BOOK</span>
+        <i class="fa fa-close float-right close-button cursor-pointer" ng-click="cancel()"></i>
+    </div>
     <md-input-container class="md-block" flex-gt-sm="">
         <label>Book name</label>
         <input ng-model="book.name">
@@ -11,16 +15,16 @@
             </md-option>
         </md-select>
     </md-input-container>
-    <md-input-container class="md-block" flex-gt-sm="">
+    <md-input-container class="md-block margin-top-50" flex-gt-sm="">
         <label>ISBN Number</label>
         <input ng-model="book.isbn">
     </md-input-container>
     <md-input-container class="md-block">
         <label>Description of content</label>
-        <textarea ng-model="user.biography" md-maxlength="300" rows="5" md-select-on-focus=""></textarea>
+        <textarea ng-model="user.biography" md-maxlength="300" rows="3" md-select-on-focus=""></textarea>
     </md-input-container>
     <div>
-            <button class="lib-button-cancel float-left" ng-click="cancel()">Cancel</button>
-            <button class="lib-button float-right" ng-click="cancel()">Save book</button>
+        <button class="lib-button-cancel float-left" ng-click="cancel()">Cancel</button>
+        <button class="lib-button float-right" ng-click="cancel()">Save book</button>
     </div>
 </div>

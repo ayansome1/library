@@ -14594,6 +14594,10 @@ md-dialog{
   min-width: 50%
 }
 
+.close-button{
+  color: lightgrey;
+}
+
 
 
 
