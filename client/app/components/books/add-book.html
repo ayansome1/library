@@ -1,6 +1,26 @@
 <div class="padding-30">
     <md-input-container class="md-block" flex-gt-sm="">
         <label>Book name</label>
-        <input ng-model="bookName">
+        <input ng-model="book.name">
     </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm="">
+        <label>Author</label>
+        <md-select ng-model="book.author">
+            <md-option ng-repeat="author in authors" value="{{author}}">
+                {{author}}
+            </md-option>
+        </md-select>
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm="">
+        <label>ISBN Number</label>
+        <input ng-model="book.isbn">
+    </md-input-container>
+    <md-input-container class="md-block">
+        <label>Description of content</label>
+        <textarea ng-model="user.biography" md-maxlength="300" rows="5" md-select-on-focus=""></textarea>
+    </md-input-container>
+    <div>
+            <button class="lib-button-cancel float-left" ng-click="cancel()">Cancel</button>
+            <button class="lib-button float-right" ng-click="cancel()">Save book</button>
+    </div>
 </div>

@@ -46,8 +46,7 @@ angular.module('libApp').controller('booksController', [
 		};
 
 		function AddBookController($scope, $mdDialog) {
-
-			$scope.x = 546;
+			$scope.authors = ['abc', 'def', 'ghi'];
 
 			$scope.hide = function() {
 				$mdDialog.hide();
@@ -56,8 +55,6 @@ angular.module('libApp').controller('booksController', [
 			$scope.cancel = function() {
 				$mdDialog.cancel();
 			};
-
-	
 		}
 	},
 ]);

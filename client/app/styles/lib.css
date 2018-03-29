@@ -14574,6 +14574,22 @@ text-white {
     cursor: pointer;
 }
 
+.lib-button-cancel {
+/*    width: 210px;
+    height: 40px;*/
+    background-color: white;
+    color: grey;
+    border: thin solid grey; 
+
+    padding: 5px 50px;
+    /*text-align: center;*/
+    /*text-decoration: none;*/
+    /*display: inline-block;*/
+    font-size: 14px;
+    /*margin: 4px 2px;*/
+    cursor: pointer;
+}
+
 md-dialog{
   min-width: 50%
 }
