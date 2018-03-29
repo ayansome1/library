@@ -14566,6 +14566,7 @@ text-white {
     border: none;
     color: white;
     padding: 5px 50px;
+    border-radius: 4px;
     /*text-align: center;*/
     /*text-decoration: none;*/
     /*display: inline-block;*/
@@ -14580,6 +14581,7 @@ text-white {
     background-color: white;
     color: grey;
     border: thin solid grey; 
+    border-radius: 4px;
 
     padding: 5px 50px;
     /*text-align: center;*/
