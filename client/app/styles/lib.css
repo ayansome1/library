@@ -14532,6 +14532,33 @@ text-white {
   float: right
 }
 
+.book-container {
+    padding: 20px;  
+    background-color: white;
+    overflow: auto;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #e4e4e4;
+   
+}
+.book-thumb {
+    float: left
+}
+.book-thumb img {
+    display: block
+}
+.book-content {
+    margin-left: 50px
+}
+.book-title {
+    font-weight: bold;
+}
+.book-description {
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+
 
 
 
