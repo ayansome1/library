@@ -1,7 +1,7 @@
 'use strict';
 /*global angular,noty*/
 
-var app = angular.module('libApp', ['ui.router','ngAnimate','ui.bootstrap','ngTouch','angularMoment']);
+var app = angular.module('libApp', ['ui.router','ngAnimate','ui.bootstrap','ngTouch','angularMoment','ngMaterial', 'ngMessages']);
 
 app.run(['$rootScope', function ($rootScope) {
 
