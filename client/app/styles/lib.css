@@ -14548,7 +14548,7 @@ text-white {
 
 
 
-.book-container {
+.lib-container {
     padding: 20px;  
     background-color: white;
     overflow: auto;
@@ -14557,17 +14557,17 @@ text-white {
     border-bottom-color: #e4e4e4;
    
 }
-.book-thumb {
+.lib-thumb {
   padding-top: 10px;
     float: left
 }
-.book-thumb img {
+.lib-thumb img {
     display: block
 }
-.book-content {
+.lib-content {
     margin-left: 50px
 }
-.book-title {
+.lib-title {
     /*font-weight: bold;*/
   font-family: "med";
 
@@ -14585,10 +14585,10 @@ text-white {
   font-family: "med";
 
 }
-.book-isbn {
+.lib-extras {
   float: right,
   font-size: 13px;
-  color: #9095aa;
+  color: #777982;
 
 }
 .book-description {
@@ -14601,7 +14601,7 @@ text-white {
   padding-right: 0px;
 }
 
-.book-header {
+.lib-header {
   color: #777982;
   font-size: 12px;
   /*font-weight: bold;*/
@@ -14609,7 +14609,7 @@ text-white {
 
 }
 
-.book-count {
+.lib-count {
   color:  #9095aa
   font-size: 12px;
 
@@ -14670,6 +14670,13 @@ md-dialog{
   cursor: pointer;
   color: #8300FF;
   font-weight: 12px;
+}
+
+.author-details {
+    font-size: 13px;
+    color: #47494f;
+    font-family: "reg"
+
 }
 
 

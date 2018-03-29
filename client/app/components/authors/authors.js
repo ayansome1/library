@@ -19,7 +19,7 @@ angular.module('libApp')
 
 		// getAllBooks();
 		// $scope.abc = "1234243252";
-		$scope.authors = "authors123";
+		// $scope.authors = "authors123";
 			$rootScope.tab = 'authors';
 		
 
