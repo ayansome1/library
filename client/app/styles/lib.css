@@ -14609,6 +14609,14 @@ text-white {
   padding-right: 0px;
 }
 
+.book-full-description {
+  overflow:hidden;
+  font-size: 12px; 
+  color: #9095aa;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .lib-header {
   color: #777982;
   font-size: 12px;
@@ -14703,6 +14711,35 @@ md-dialog{
 .md-datepicker-input-container{
   padding-left: 5px;
   width: 100%;
+}
+
+.next-button {
+    padding-left: 39px;
+    padding-right: 41px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border: solid;
+    border-width: 1.3px;
+    border-color: #e4e4e4;
+    cursor: pointer;
+    background-color: white;
+}
+
+.next-msg {
+  color: #b5b7c4;
+}
+
+.theme-color {
+  color: #8300FF;
+}
+
+.dummy-url-first {
+  font-size: 13px;
+  color: #8300FF;
+}
+.dummy-url-second {
+  font-size: 13px;
+  color: #bdc0cc;
 }
 
 
