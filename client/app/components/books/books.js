@@ -68,7 +68,7 @@ angular.module('libApp').controller('booksController', [
 			// console.log("yesss");
 			$http.get(baseUrl + "/all-books").then((response)=>{
 				console.log(response.data);
-				$scope.showSuccess("Fetched all books");
+				// $scope.showSuccess("Fetched all books");
 			},(err)=>{
 				$scope.showError("error in fetching all books");
 			});

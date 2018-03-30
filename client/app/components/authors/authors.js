@@ -40,7 +40,7 @@ angular.module('libApp').controller('authorsController', [
 						console.log(response.data);
 						$mdDialog.cancel();
 						getAllAuthors();
-						$scope.$parent.showSuccess('Added new author');
+						// $scope.$parent.showSuccess('Added new author');
 					},
 					err => {
 						$scope.$parent.showError('Error in adding new author');
@@ -57,7 +57,7 @@ angular.module('libApp').controller('authorsController', [
 					$scope.authors = response.data;
 					$scope.authorCount = response.data.length;
 
-					$scope.showSuccess('Fetched all authors');
+					// $scope.showSuccess('Fetched all authors');
 				},
 				err => {
 					$scope.showError('Unable to fetch authors');
