@@ -38,7 +38,7 @@
     <div class="col-xs-12 padding-0">
         <md-input-container class="md-block margin-bottom-0" flex-gt-sm="">
             <label>Born in</label>
-            <input ng-model="author.bornIn">
+            <input ng-model="author.country">
         </md-input-container>
     </div>
     <div class="col-xs-12 padding-0">
@@ -49,6 +49,6 @@
     </div>
     <div>
         <button class="lib-button-cancel float-left" ng-click="cancel()">Cancel</button>
-        <button class="lib-button float-right" ng-click="cancel()">Save Author</button>
+        <button class="lib-button float-right" ng-disabled="!author.name || !author.dob || !author.gender || !author.country || !author.about" ng-click="save(author)">Save Author</button>
     </div>
 </div>
