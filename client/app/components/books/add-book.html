@@ -9,9 +9,9 @@
     </md-input-container>
     <md-input-container class="md-block" flex-gt-sm="">
         <label>Author</label>
-        <md-select ng-model="book.author">
-            <md-option ng-repeat="author in authors" value="{{author}}">
-                {{author}}
+        <md-select ng-model="book.author_id">
+            <md-option ng-repeat="author in authors" value="{{author.author_id}}">
+                {{author.name}}
             </md-option>
         </md-select>
     </md-input-container>
@@ -25,6 +25,6 @@
     </md-input-container>
     <div>
         <button class="lib-button-cancel float-left" ng-click="cancel()">Cancel</button>
-        <button class="lib-button float-right" ng-click="save(book)">Save book</button>
+        <button class="lib-button float-right" ng-disabled="!book.name || !book.author_id || !book.isbn || !book.description" ng-click="save(book)">Save book</button>
     </div>
 </div>

@@ -9,5 +9,7 @@ module.exports = (app/*, auth*/) => {
 	app.get('/all-books'/*,auth*/, libCtrl.getAllBooks);
 	app.post('/author',libCtrl.addNewAuthor);
 	app.get('/authors',libCtrl.getAllAuthors);
+	app.post('/book',libCtrl.addNewBook);
+
 
 };
