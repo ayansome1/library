@@ -14762,6 +14762,19 @@ md-dialog{
 
 }
 
+.author-books-container {
+    padding-left: 0px;
+    padding-right: 0px;  
+    padding-bottom: 20px;
+    background-color: white;
+    margin-top: 20px;
+    /*overflow: auto;*/
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #e4e4e4;
+   
+}
+
 
 
 
