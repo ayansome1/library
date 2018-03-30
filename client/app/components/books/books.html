@@ -1,5 +1,5 @@
 <div class="container-fluid" data-ng-controller="booksController">
-    <div class="col-xs-12 padding-top-10 padding-bottom-20">
+    <div class="col-xs-12 padding-top-20 padding-bottom-20 padding-left-0" ng-style="{'visibility': books.length ? '' : 'hidden'}">
         <div class="col-xs-8">
             <span class="lib-header">
                 BOOKS
@@ -9,25 +9,30 @@
             </span>
         </div>
     </div>
-    <div class="col-xs-8" ng-repeat="book in books">
-        <div class="lib-container">
-            <div class="lib-thumb">
-                <img src="images/book_icon.svg" />
-            </div>
-            <div class="lib-content">
-                <div>
-                    <span class="lib-title">{{book.name}}</span>
-                    <span class="lib-extras float-right">ISBN - {{book.isbn}}</span>
+    <div class="col-xs-8 no-details text-center" ng-show="!books.length">
+        No books yet !
+    </div>
+    <div class="col-xs-8" ng-show="books.length">
+        <div class="col-xs-12 padding-left-0" ng-repeat="book in books">
+            <div class="lib-container">
+                <div class="lib-thumb">
+                    <img src="images/book_icon.svg" />
                 </div>
-                <div>
-                    <span class="book-by">by </span>
-                    <span class="book-author"> {{book.author_name}}</span>
-                </div>
-                <div class="col-xs-11 book-description">
-                    {{book.description}}
-                </div>
-                <div class="col-xs-1 more-info">
-                    More
+                <div class="lib-content">
+                    <div>
+                        <span class="lib-title">{{book.name}}</span>
+                        <span class="lib-extras float-right">ISBN - {{book.isbn}}</span>
+                    </div>
+                    <div>
+                        <span class="book-by">by </span>
+                        <span class="book-author"> {{book.author_name}}</span>
+                    </div>
+                    <div class="col-xs-11 book-description">
+                        {{book.description}}
+                    </div>
+                    <div class="col-xs-1 more-info">
+                        More
+                    </div>
                 </div>
             </div>
         </div>
