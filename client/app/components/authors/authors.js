@@ -55,6 +55,7 @@ angular.module('libApp').controller('authorsController', [
 					console.log(response.data);
 
 					$scope.authors = response.data;
+					$scope.authorCount = response.data.length;
 
 					$scope.showSuccess('Fetched all authors');
 				},
