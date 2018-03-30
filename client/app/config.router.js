@@ -22,7 +22,7 @@ angular
 					templateUrl: 'components/books/books.html',
 				})
 
-				.state('app.books-details', {
+				.state('app.book-details', {
 					url: '/books/:id',
 					templateUrl: 'components/books/book-details.html',
 				})
@@ -30,6 +30,11 @@ angular
 				.state('app.authors', {
 					url: '/authors',
 					templateUrl: 'components/authors/authors.html',
+				})
+
+				.state('app.author-details', {
+					url: '/authors/:id',
+					templateUrl: 'components/authors/author-details.html',
 				});
 		},
 	]);
