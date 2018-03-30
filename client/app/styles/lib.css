@@ -14742,6 +14742,27 @@ md-dialog{
   color: #bdc0cc;
 }
 
+.about-author {
+  color: #9395a0;
+  font-size: 13px;
+}
+
+.author-full-description {
+  overflow:hidden;
+  font-size: 13px; 
+  color: #9395a0;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.book-count {
+  color: #aaaebf;
+  font-size: 12px;
+  font-family: "med";
+
+}
+
+
 
 
 
