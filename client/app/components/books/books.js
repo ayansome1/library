@@ -26,6 +26,7 @@ angular.module('libApp').controller('booksController', [
 		$scope.books = '12';
 		$rootScope.tab = 'books';
 
+
 		$scope.showAdvanced = function(ev) {
 			$mdDialog.show({
 				controller: AddBookController,
@@ -55,6 +56,25 @@ angular.module('libApp').controller('booksController', [
 			$scope.cancel = function() {
 				$mdDialog.cancel();
 			};
+
+			$scope.save = (book) => {
+				console.log(book);
+				getAllBooks();
+			};
+
 		}
+
+		let getAllBooks = () => {
+			// console.log("yesss");
+			$http.get(baseUrl + "/all-books").then((response)=>{
+				console.log(response.data);
+				$scope.showSuccess("Fetched all books");
+			},(err)=>{
+				$scope.showError("error in fetching all books");
+			});
+		}
+
+		getAllBooks();
+
 	}
 ]);

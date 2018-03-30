@@ -9,25 +9,25 @@ connInfo.multipleStatements = true;
 
 let getAllBooks = (req, res) => {
 
-  res.send("all books here");
+  // res.send("all books here");
 
 
-  // let params = [];
+  let params = [];
 
-  // let connection = mysql.createConnection(connInfo);
-  // let query = "";
-  // // params.push();
-  // let sql = connection.query(query, params, function (err, results) {
+  let connection = mysql.createConnection(connInfo);
+  let query = "select * from books;";
+  // params.push();
+  let sql = connection.query(query, params, function (err, results) {
 
-  //   if (err) {
-  //     res.status(500).send(err);
-  //   } else {
-  //     res.status(200).send(results);
-  //   }
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.send(results);
+    }
 
-  // });
-  // console.log(sql.sql);
-  // connection.end();
+  });
+  console.log(sql.sql);
+  connection.end();
 
 };
 
