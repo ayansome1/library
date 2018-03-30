@@ -56,5 +56,5 @@ angular.module('libApp').controller('booksController', [
 				$mdDialog.cancel();
 			};
 		}
-	},
+	}
 ]);
