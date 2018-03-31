@@ -11,6 +11,8 @@ module.exports = (app/*, auth*/) => {
 	app.get('/authors',libCtrl.getAllAuthors);
 	app.post('/book',libCtrl.addNewBook);
 	app.get('/book-details/:id',libCtrl.getBookDetails);
+	app.get('/author-details/:id',libCtrl.getAuthorDetails);
+
 
 
 };

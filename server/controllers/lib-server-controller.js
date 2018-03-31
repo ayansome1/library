@@ -129,10 +129,48 @@ let getBookDetails = (req, res) => {
   connection.end();
 };
 
+
+let getAuthorDetails = (req, res) => {
+  
+  let id = req.params.id;
+  let params = [];
+
+  let connection = mysql.createConnection(connInfo);
+  let query1 = `select author_id,name,gender,country,about,
+                TIMESTAMPDIFF(YEAR,dob,CURDATE()) as age from authors 
+                where author_id = ?;`;
+  let query2 = `select * from books where author_id = ?;`;
+  let query3 = `select min(author_id) as next from authors where author_id > ?;`;
+  let query4 = `select max(author_id) as prev from authors where author_id < ?;`;
+
+
+  params.push(id,id,id,id);
+
+  let sql = connection.query(query1 + query2 + query3 + query4, params, function(err, results) {
+    if (err) {
+      console.log(err);
+      res.status(500).send(err);
+    } else {
+
+      console.log("----------------\n",results,"\n------------");
+
+
+      let obj = {authorDetails : results[0][0],
+                  books : results[1],
+                 prevAuthorId : results[3][0].prev,
+                 nextAuthorId : results[2][0].next}
+      res.send(obj);
+    }
+  });
+  // console.log(sql.sql);
+  connection.end();
+};
+
 module.exports = {
   getAllBooks,
   addNewAuthor,
   getAllAuthors,
   addNewBook,
-  getBookDetails
+  getBookDetails,
+  getAuthorDetails
 };
