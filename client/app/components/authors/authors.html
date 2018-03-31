@@ -23,8 +23,11 @@
                         <span class="lib-title">{{it.name}}</span>
                         <span class="lib-extras float-right">Born in {{it.country}}</span>
                     </div>
-                    <div class="author-details">
+                    <div class="col-xs-10 padding-left-0 author-details">
                         Age {{it.age}} / {{it.gender}}
+                    </div>
+                    <div class="col-xs-2 text-right padding-right-0 more-info" ui-sref="app.author-details({id: it.author_id})">
+                        More
                     </div>
                 </div>
             </div>

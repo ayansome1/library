@@ -27,10 +27,10 @@
                         <span class="book-by">by </span>
                         <span class="book-author"> {{book.author_name}}</span>
                     </div>
-                    <div class="col-xs-11 book-description">
+                    <div class="col-xs-10 padding-left-0 book-description">
                         {{book.description}}
                     </div>
-                    <div class="col-xs-1 more-info">
+                    <div class="col-xs-2 text-right padding-right-0 more-info" ui-sref="app.book-details({id: book.book_id})">
                         More
                     </div>
                 </div>
