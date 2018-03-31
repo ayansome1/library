@@ -14,36 +14,22 @@ let q = require('q');
 
 var connInfo = config.sqlconn;
 
-app.use(cors({
-    origin: [config.lib.corsorigin],
-    credentials: true
-}));
-
+app.use(
+	cors({
+		origin: [config.lib.corsorigin],
+		credentials: true,
+	})
+);
 
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 
 if (!process.env.NODE_ENV) {
-    app.use(require('morgan')('dev'));
+	app.use(require('morgan')('dev'));
 }
-
-
-// function auth(req,res,next) {
-
-// 	let accessToken = req.get('access-token');
-// 	if(accessToken === config.accessToken) {
-// 		next();				
-// 	}
-// 	else{
-// 		res.status(401).send();
-// 	}
-
-// }
 
 let libRoutes = require('./routes/lib-server-routes.js');
 
-
-libRoutes(app/*,auth*/);
-
+libRoutes(app);
 
 var server = http.createServer(app);
 
