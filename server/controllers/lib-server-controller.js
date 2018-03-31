@@ -13,7 +13,8 @@ let getAllBooks = (req, res) => {
 
   let connection = mysql.createConnection(connInfo);
   let query = `select b.book_id,b.name,b.author_id,b.isbn,b.description,
-      a.name as author_name from books b left join authors a on b.author_id = a.author_id;`;
+      a.name as author_name from books b left join authors a 
+      on b.author_id = a.author_id;`;
   // params.push();
   let sql = connection.query(query, params, function(err, results) {
     if (err) {
@@ -104,7 +105,9 @@ let getBookDetails = (req, res) => {
   let params = [];
 
   let connection = mysql.createConnection(connInfo);
-  let query1 = `select * from books where book_id = ?;`;
+  let query1 = `select b.book_id,b.name,b.author_id,b.isbn,b.description,
+                a.name as author_name from books b left join authors a 
+                on b.author_id = a.author_id where book_id = ?;`;
   let query2 = `select min(book_id) as next from books where book_id > ?;`;
   let query3 = `select max(book_id) as prev from books where book_id < ?;`;
 

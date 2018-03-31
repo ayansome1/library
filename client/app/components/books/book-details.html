@@ -1,13 +1,11 @@
 <div class="container-fluid" data-ng-controller="bookDetailsController">
     <div class="col-xs-12 padding-top-10 padding-bottom-20">
-        <!-- <div class="col-xs-8"> -->
-            <span class="dummy-url-first">
+        <span class="dummy-url-first">
                 Books /
             </span>
-            <span class="dummy-url-second">
+        <span class="dummy-url-second">
                 Details
             </span>
-        <!-- </div> -->
     </div>
     <div class="col-xs-8">
         <div class="lib-container">
@@ -16,29 +14,24 @@
             </div>
             <div class="lib-content">
                 <div>
-                    <span class="lib-title">Book title</span>
-                    <span class="lib-extras float-right">ISBN - 131246198461289</span>
+                    <span class="lib-title">{{book.name}}</span>
+                    <span class="lib-extras float-right">ISBN - {{book.isbn}}</span>
                 </div>
                 <div>
                     <span class="book-by">by </span>
-                    <span class="book-author"> Philip K. Roy</span>
+                    <span class="book-author"> {{book.author_name}}</span>
                 </div>
                 <div class="col-xs-11 book-full-description">
-                    It was afnkla fasfsd ds gsd gsdg ret re tre t ret re t re tre t re t re t ret re t er tertretretet ret re tre tretretreterterterter 
-                    It was afnkla fasfsd ds gsd gsdg ret re tre t ret re t re tre t re t re t ret re t er tertretretet ret re tre tretretreterterterter
+                    {{book.description}}
                 </div>
             </div>
         </div>
     </div>
     <div class="col-xs-4 text-center">
-
-        <img class="next-button" src="images/prev_icon.svg">
-        <img class="next-button" src="images/next_icon.svg">
-
+        <img class="next-button" ng-show="prevBookId" src="images/prev_icon.svg" ui-sref="app.book-details({id: prevBookId})">
+        <img class="next-button" ng-show="nextBookId" src="images/next_icon.svg" ui-sref="app.book-details({id: nextBookId})">
         <div class="margin-top-20 next-msg">
             Navigate to Previous / Next Book
         </div>
-
-        <!-- <button class="lib-button" ng-click="showAdvanced($event)">Add Book</button> -->
     </div>
 </div>

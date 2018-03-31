@@ -9,21 +9,23 @@ angular.module('libApp').controller('bookDetailsController', [
 	'$state',
 	'$mdDialog',
 	'$stateParams',
-	function($scope, $http, baseUrl, $rootScope, $state, $mdDialog,$stateParams) {
+	function($scope, $http, baseUrl, $rootScope, $state, $mdDialog, $stateParams) {
 		$rootScope.tab = '';
-        var id = $stateParams.id;
-
-
+		var id = $stateParams.id;
 
 		let getBookDetails = () => {
-
-			$http.get(baseUrl + '/book-details/' + id).then((response)=>{
-				console.log(response.data);
-			}).catch((response)=>{
-				$scope.showError("unable to get book details");
-			});
+			$http
+				.get(baseUrl + '/book-details/' + id)
+				.then(response => {
+					console.log(response.data);
+					$scope.book = response.data.bookDetails;
+					$scope.nextBookId = response.data.nextBookId;
+					$scope.prevBookId = response.data.prevBookId;
+				})
+				.catch(response => {
+					$scope.showError('unable to get book details');
+				});
 		};
 		getBookDetails();
-
-	}
+	},
 ]);
