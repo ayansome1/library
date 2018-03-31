@@ -32,14 +32,14 @@
                         <img src="images/book_icon.svg" />
                     </div>
                     <div class="lib-content padding-left-0">
-                        <div class="margin-bottom-20">
+                        <div class="margin-bottom-10">
                             <span class="lib-title">{{it.name}}</span>
                             <span class="lib-extras float-right">ISBN - {{it.isbn}}</span>
                         </div>
-                        <div class="col-xs-10 col-sm-11 book-description ">
+                        <div class="col-xs-10 col-md-11 book-description ">
                             {{it.description}}
                         </div>
-                        <div class="col-xs-2 col-sm-1 more-info">
+                        <div class="col-xs-2 col-md-1 text-right padding-right-0 more-info">
                             <span ui-sref="app.book-details({id: it.book_id})">More</span>
                         </div>
                     </div>

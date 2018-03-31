@@ -1421,9 +1421,9 @@ md-dialog{
     padding-bottom: 20px;
     background-color: white;
     margin-top: 20px;
-    border-bottom-style: solid;
-    border-bottom-width: thin;
-    border-bottom-color: #e4e4e4;
+    /*border-bottom-style: solid;*/
+    /*border-bottom-width: thin;*/
+    /*border-bottom-color: #e4e4e4;*/
    
 }
 
