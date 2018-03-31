@@ -17,7 +17,6 @@ angular.module('libApp').controller('bookDetailsController', [
 			$http
 				.get(baseUrl + '/book-details/' + id)
 				.then(response => {
-					console.log(response.data);
 					$scope.book = response.data.bookDetails;
 					$scope.nextBookId = response.data.nextBookId;
 					$scope.prevBookId = response.data.prevBookId;

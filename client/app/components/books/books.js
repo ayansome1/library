@@ -36,7 +36,6 @@ angular.module('libApp').controller('booksController', [
 				$http
 					.get(baseUrl + '/authors')
 					.then(response => {
-						console.log(response.data);
 
 						$scope.authors = response.data;
 					})
@@ -48,7 +47,6 @@ angular.module('libApp').controller('booksController', [
 			getAllAuthors();
 
 			$scope.save = book => {
-				console.log(book);
 				$http
 					.post(baseUrl + '/book', { book: book })
 					.then(response => {
@@ -68,7 +66,6 @@ angular.module('libApp').controller('booksController', [
 				.then(response => {
 					$scope.books = response.data;
 					$scope.bookCount = response.data.length;
-					console.log(response.data);
 				})
 				.catch(response => {
 					$scope.showError('error in fetching all books');

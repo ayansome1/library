@@ -18,7 +18,6 @@ angular.module('libApp').controller('authorDetailsController', [
 			$http
 				.get(baseUrl + '/author-details/' + id)
 				.then(response => {
-					console.log(response.data);
 					$scope.author = response.data.authorDetails;
 					$scope.nextAuthorId = response.data.nextAuthorId;
 					$scope.prevAuthorId = response.data.prevAuthorId;

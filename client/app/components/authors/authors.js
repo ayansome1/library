@@ -37,7 +37,6 @@ angular.module('libApp').controller('authorsController', [
 				$http
 					.post(baseUrl + '/author', { author: author })
 					.then(response => {
-						console.log(response.data);
 						$mdDialog.cancel();
 						getAllAuthors();
 					})
@@ -51,8 +50,6 @@ angular.module('libApp').controller('authorsController', [
 			$http
 				.get(baseUrl + '/authors')
 				.then(response => {
-					console.log(response.data);
-
 					$scope.authors = response.data;
 					$scope.authorCount = response.data.length;
 				})
