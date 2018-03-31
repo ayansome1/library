@@ -34,35 +34,31 @@ angular.module('libApp').controller('authorsController', [
 			};
 
 			$scope.save = author => {
-				// saveAuthor(author);
-				$http.post(baseUrl + '/author', { author: author }).then(
-					response => {
+				$http
+					.post(baseUrl + '/author', { author: author })
+					.then(response => {
 						console.log(response.data);
 						$mdDialog.cancel();
 						getAllAuthors();
-						// $scope.$parent.showSuccess('Added new author');
-					},
-					err => {
+					})
+					.catch(response => {
 						$scope.$parent.showError('Error in adding new author');
-					}
-				);
+					});
 			};
 		}
 
 		let getAllAuthors = () => {
-			$http.get(baseUrl + '/authors').then(
-				response => {
+			$http
+				.get(baseUrl + '/authors')
+				.then(response => {
 					console.log(response.data);
 
 					$scope.authors = response.data;
 					$scope.authorCount = response.data.length;
-
-					// $scope.showSuccess('Fetched all authors');
-				},
-				err => {
+				})
+				.catch(response => {
 					$scope.showError('Unable to fetch authors');
-				}
-			);
+				});
 		};
 		getAllAuthors();
 	},

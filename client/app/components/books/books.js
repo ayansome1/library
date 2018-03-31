@@ -9,20 +9,6 @@ angular.module('libApp').controller('booksController', [
 	'$state',
 	'$mdDialog',
 	function($scope, $http, baseUrl, $rootScope, $state, $mdDialog) {
-		// let  getAllBooks = () => {
-
-		// 	$http.get(baseUrl + "/all-books").then(function (response) {
-
-		// 		console.log(response.data);
-		// 	})
-		// 	.catch(function () {
-		// 		$scope.showError("Unable to fetch all books");
-		// 	 });
-
-		// };
-
-		// getAllBooks();
-		// $scope.abc = "1234243252";
 		$scope.books = '12';
 		$rootScope.tab = 'books';
 
@@ -35,19 +21,9 @@ angular.module('libApp').controller('booksController', [
 				clickOutsideToClose: true,
 				fullscreen: true, // Only for -xs, -sm breakpoints.
 			});
-			/*.then(
-					function(answer) {
-						$scope.status = 'You said the information was "' + answer + '".';
-					},
-					function() {
-						$scope.status = 'You cancelled the dialog.';
-					}
-				)*/
 		};
 
 		function AddBookController($scope, $mdDialog) {
-			// $scope.authors = ['abc', 'def', 'ghi'];
-
 			$scope.hide = function() {
 				$mdDialog.hide();
 			};
@@ -57,71 +33,48 @@ angular.module('libApp').controller('booksController', [
 			};
 
 			let getAllAuthors = () => {
-				$http.get(baseUrl + '/authors').then(
-					response => {
+				$http
+					.get(baseUrl + '/authors')
+					.then(response => {
 						console.log(response.data);
 
 						$scope.authors = response.data;
-						// $scope.authorCount = response.data.length;
-
-						// $scope.showSuccess('Fetched all authors');
-					},
-					err => {
-						$scope.showError('Unable to fetch authors');
-					}
-				);
+					})
+					.catch(response => {
+						$scope.$parent.showError('Unable to fetch authors');
+					});
 			};
 
 			getAllAuthors();
 
 			$scope.save = book => {
 				console.log(book);
-				// getAllBooks();
-				$http.post(baseUrl + '/book', { book: book }).then(
-					response => {
+				$http
+					.post(baseUrl + '/book', { book: book })
+					.then(response => {
 						console.log(response.data);
 						$mdDialog.cancel();
 						getAllBooks();
-						// $scope.$parent.showSuccess('Added new author');
-					},
-					err => {
+					})
+					.catch(response => {
 						$scope.$parent.showError('Error in adding new book');
-					}
-				);
+					});
 			};
 		}
 
 		let getAllBooks = () => {
-			// console.log("yesss");
-			$http.get(baseUrl + '/all-books').then(
-				response => {
+			$http
+				.get(baseUrl + '/all-books')
+				.then(response => {
 					$scope.books = response.data;
 					$scope.bookCount = response.data.length;
 					console.log(response.data);
-					// $scope.showSuccess("Fetched all books");
-				},
-				err => {
+				})
+				.catch(response => {
 					$scope.showError('error in fetching all books');
-				}
-			);
+				});
 		};
 
 		getAllBooks();
-
-		// let getAllAuthors = () => {
-		// 	$http.get(baseUrl + '/authors').then(
-		// 		response => {
-		// 			console.log(response.data);
-
-		// 			$scope.authors = response.data;
-		// 			// $scope.authorCount = response.data.length;
-
-		// 			// $scope.showSuccess('Fetched all authors');
-		// 		},
-		// 		err => {
-		// 			$scope.showError('Unable to fetch authors');
-		// 		}
-		// 	);
-		// };
 	},
 ]);
