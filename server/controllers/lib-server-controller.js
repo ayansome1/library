@@ -12,7 +12,7 @@ let getAllBooks = (req, res) => {
   let connection = mysql.createConnection(connInfo);
   let query = `select b.book_id,b.name,b.author_id,b.isbn,b.description,
       a.name as author_name from books b left join authors a 
-      on b.author_id = a.author_id;`;
+      on b.author_id = a.author_id order by b.book_id;`;
   let sql = connection.query(query, params, function(err, results) {
     if (err) {
       res.status(500).send(err);
