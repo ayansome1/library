@@ -1196,7 +1196,7 @@ li.urban-noty:last-child {
     display: block; /* This will put the pseudo element on its own line. */
     margin: 0 auto; /* This will center the border. */
     width: 10px; /* Change this to whatever width you want. */
-    padding-top: 5px; 
+    /*padding-top: 5px; */
 }
 
 .topnav a:hover ,.topnav a.active{
